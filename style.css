@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Outfit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 22rem;
+    background-color: var(--very-dark-blue-card-bg);
+    padding: 1.5rem;
+    border-radius: 18px;
+}
+
+.pro-img-container {
+    position: relative;
+    background-color: var(--cyan);
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.pro-img-container .pro-img {
+    /* Use display : block and apply margin auto => center image horizontally */
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.pro-img-container .view-img {
+    /* Center the view image inside the product image */
+    position: absolute;
+    height: 3rem;
+    top: 50%;
+    left: 50%;
+    /* margin left and top to  */
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+    display: none;
+}
+.pro-img-container .pro-img:hover~.view-img {
+    display: block;
+}
+
+.pro-section .pro-name {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.pro-section .pro-name:hover {
+    color: var(--cyan);
+}
+
+.pro-section .pro-desc {
+    font-size: 17px;
+    color: var(--soft-blue);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 1.25rem;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.price-section img {
+    margin-right: 0.5rem;
+}
+
+.time-section {
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+.time-section img {
+    margin-right: 0.5rem;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--very-dark-blue-line);
+    margin-bottom: 1rem;
+}
+
+.creator-section {
+    display: flex;
+    align-items: center;
+}
+
+.creator-section img {
+    height: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--white);
+    margin-right: 1rem;
+}
+
+.creator-desc {
+    color: var(--soft-blue);
+}
+
+.creator-desc span {
+    color: var(--white);
+    transition: color 0.15s;
+    cursor: pointer;
+}
+
+.creator-desc span:hover {
+    color: var(--cyan);
+}

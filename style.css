@@ -38,16 +38,28 @@ img {
 
 .pro-img-container {
     position: relative;
-    background-color: var(--cyan);
     border-radius: 7px;
     margin-bottom: 20px;
+    transition: display 0.15s ease-in-out;
 }
 
-.pro-img-container .pro-img {
-    /* Use display : block and apply margin auto => center image horizontally */
+.pro-img-container>img {
+    /* Set display: block to img to avoid black space below */
     display: block;
-    margin: auto;
-    cursor: pointer;
+}
+
+.pro-img-container div {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+.pro-img-container:hover div {
+    display: block;
 }
 
 .pro-img-container .view-img {
@@ -56,13 +68,7 @@ img {
     height: 3rem;
     top: 50%;
     left: 50%;
-    /* margin left and top to  */
-    margin-left: -1.5rem;
-    margin-top: -1.5rem;
-    display: none;
-}
-.pro-img-container .pro-img:hover~.view-img {
-    display: block;
+    transform: translate(-50%, -50%);
 }
 
 .pro-section .pro-name {
